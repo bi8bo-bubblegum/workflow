@@ -39,7 +39,7 @@ def fetch_github(state: WorkFlowState, github_token: str) -> dict:
                     'date': commit.commit.author.date.isoformat()
                 })
 
-            pulls = repo.get_pulls(state='all', sort='create', direction='desc')
+            pulls = repo.get_pulls(state='all', sort='created', direction='desc')
             for pr in pulls:
                 if pr.created_at.date() == target_date.date():
                     repo_data['pull_requests'].append({

@@ -7,7 +7,7 @@ def _format_github_data(github_data: dict) -> str:
         return 'GitHub数据获取失败'
     sections = []
     for repo_name, data in github_data.items():
-        sections.append(f'## 仓库：{repo_name}')
+        sections.append(f'## 仓库: {repo_name}')
 
         if data.get('commits'):
             sections.append('### Commits')
@@ -16,7 +16,7 @@ def _format_github_data(github_data: dict) -> str:
                     f'- [{commit['sha']}] {commit['message']} ({commit['author']})'
                 )
 
-        if data.get('pul_requests'):
+        if data.get('pull_requests'):
             sections.append('### Pull Requests')
             for pr in data['pul_requests']:
                 sections.append(
@@ -44,7 +44,7 @@ def merge_manual_input(state: WorkFlowState) -> dict:
     github_text = _format_github_data(state['github_data'])
 
     parts = [
-        f'# 日期： {state['date']}',
+        f"# 日期： {state['date']}",
         '',
         github_text
     ]
