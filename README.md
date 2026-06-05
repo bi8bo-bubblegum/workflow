@@ -14,8 +14,6 @@ source venv/bin/activate  # Linux/Mac
 
 # 3. 安装依赖
 
-pip install -r requirements.txt
-
 pip install -e .
 
 # 4. 创建自己的 .env 文件
