@@ -199,7 +199,16 @@ $env:PYTHONHTTPSVERIFY = "0"    # Windows
 或更新证书：
 
 ```bash
+# 安装 certifi 证书包
 pip install --upgrade certifi
+
+# 查看 Python 当前使用的证书路径
+python -c "import certifi; print(certifi.where())"
+
+如果上面命令返回了一个路径，再执行：
+
+# 将新的证书合并到 Python 的证书存储
+pip install python-certifi-win32
 ```
 </details>
 
