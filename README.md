@@ -190,7 +190,7 @@ send_email (邮件推送)
 ## 常见问题
 
 <details>
-<summary><b>SSL 证书验证失败</b></summary>
+<summary><b>SSL 证书验证失败（GitHub数据获取失败）</b></summary>
 
 ```bash
 # 临时跳过 SSL 验证（不推荐生产环境使用）
