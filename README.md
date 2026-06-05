@@ -14,8 +14,6 @@ source venv/bin/activate  # Linux/Mac
 
 # 3. 安装依赖
 
-pip install -r requirements.txt
-
 pip install -e .
 
 # 4. 创建自己的 .env 文件
@@ -26,6 +24,8 @@ DEEPSEEK_API_KEY=sk_xxxxxxxxxxxx
 
 EMAIL_PASSWORD=xxxxxxxxxxxx
 
-# 5. 运行
+# 5. 修改config.py中的配置
+
+# 6. 运行
 
 python -m daily_report --help
