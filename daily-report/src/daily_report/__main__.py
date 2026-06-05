@@ -6,10 +6,10 @@ import time
 
 from loguru import logger
 
-from .config import load_config_from_module
-from .graph import build_graph
-from .scheduler import DailyReportScheduler
-from .state import create_initial_state
+from daily_report.config import load_config_from_module
+from daily_report.graph import build_graph
+from daily_report.scheduler import DailyReportScheduler
+from daily_report.state import create_initial_state
 
 
 def _run_once(config_path: str, date: str | None, problems: str, plan: str) -> None:

@@ -3,8 +3,8 @@ from langchain_core.messages import SystemMessage, HumanMessage
 from langchain_openai import ChatOpenAI
 from loguru import logger
 
-from ..prompts import USER_PROMPT_TEMPLATE, SYSTEM_PROMPT
-from ..state import WorkFlowState
+from daily_report.prompts import USER_PROMPT_TEMPLATE, SYSTEM_PROMPT
+from daily_report.state import WorkFlowState
 
 
 def generate_report(

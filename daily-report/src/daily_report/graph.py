@@ -3,12 +3,12 @@ from functools import partial
 from langgraph.constants import START, END
 from langgraph.graph import StateGraph
 
-from .config import AppConfig
-from .nodes.fetch_github import fetch_github
-from .nodes.generate import generate_report
-from .nodes.merge_input import merge_manual_input
-from .nodes.send_email import send_email
-from .state import WorkFlowState
+from daily_report.config import AppConfig
+from daily_report.nodes.fetch_github import fetch_github
+from daily_report.nodes.generate import generate_report
+from daily_report.nodes.merge_input import merge_manual_input
+from daily_report.nodes.send_email import send_email
+from daily_report.state import WorkFlowState
 
 
 def build_graph(config: AppConfig):
