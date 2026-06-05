@@ -16,16 +16,8 @@ source venv/bin/activate  # Linux/Mac
 
 pip install -e .
 
-# 4. 创建自己的 .env 文件
+# 4. 创建自己的 .env 文件，修改配置
 
-GITHUB_TOKEN=ghp_xxxxxxxxxxxx
-
-DEEPSEEK_API_KEY=sk_xxxxxxxxxxxx
-
-EMAIL_PASSWORD=xxxxxxxxxxxx
-
-# 5. 修改config.py中的配置
-
-# 6. 运行
+# 5. 运行
 
 python -m daily_report --help
