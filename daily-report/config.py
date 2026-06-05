@@ -6,12 +6,6 @@
 import sys
 from pathlib import Path
 
-# 将 src 目录添加到 Python 路径
-_project_root = Path(__file__).parent
-_src_path = _project_root / "src"
-if str(_src_path) not in sys.path:
-    sys.path.insert(0, str(_src_path))
-
 from dotenv import dotenv_values, load_dotenv
 
 from daily_report.config import AppConfig, EmailConfig, GitHubConfig, LLMConfig
