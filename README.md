@@ -5,7 +5,7 @@ cd daily-report/daily-report
 # 2. 创建虚拟环境（推荐）
 python -m venv venv
 venv\Scripts\activate      # Windows
-# source venv/bin/activate  # Linux/Mac
+source venv/bin/activate  # Linux/Mac
 
 # 3. 安装依赖
 pip install -r requirements.txt
