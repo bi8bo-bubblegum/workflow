@@ -15,26 +15,28 @@ env = {**dotenv_values(".env"), **dotenv_values(".env.local")}
 github = GitHubConfig(
     token=env["GITHUB_TOKEN"],
     repos=[
-        "owner/repo1",
+        "bi8bo-bubblegum/chat-demo",
+        "bi8bo-bubblegum/chat",
+        "bi8bo-bubblegum/workflow"
     ],
 )
 
 # LLM 配置
 llm = LLMConfig(
-    model="deepseek-chat",
-    base_url="https://api.deepseek.com/v1",
+    model="deepseek-v4-flash",
+    base_url="https://api.deepseek.com",
     api_key=env["DEEPSEEK_API_KEY"],
     temperature=0.3,
 )
 
 # 邮件配置
 email = EmailConfig(
-    smtp_host="smtp.example.com",
+    smtp_host="smtp.163.com",
     smtp_port=465,
-    sender="daily-report@example.com",
+    sender="18381863687@163.com",
     password=env["EMAIL_PASSWORD"],
     recipients=[
-        "self@example.com",
+        "1035081050@qq.com",
     ],
 )
 
