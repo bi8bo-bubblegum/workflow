@@ -1,6 +1,6 @@
 # 1. 克隆代码
 
-git clone https://github.com/ 你的用户名/daily-report.git
+git clone https://github.com/bi8bo-bubblegum/workflow.git
 
 cd daily-report/daily-report
 
@@ -19,6 +19,7 @@ pip install -r requirements.txt
 pip install -e .
 
 # 4. 创建自己的 .env 文件
+
 GITHUB_TOKEN=ghp_xxxxxxxxxxxx
 
 DEEPSEEK_API_KEY=sk_xxxxxxxxxxxx
