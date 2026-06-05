@@ -24,6 +24,8 @@ DEEPSEEK_API_KEY=sk_xxxxxxxxxxxx
 
 EMAIL_PASSWORD=xxxxxxxxxxxx
 
-# 5. 运行
+# 5. 修改config.py中的配置
+
+# 6. 运行
 
 python -m daily_report --help
