@@ -3,7 +3,7 @@ from datetime import datetime, timezone
 from github import Github
 from loguru import logger
 
-from daily_report.state import WorkFlowState
+from ..state import WorkFlowState
 
 
 def fetch_github(state: WorkFlowState, github_token: str) -> dict:

@@ -6,7 +6,7 @@ from pathlib import Path
 
 from loguru import logger
 
-from daily_report.state import WorkFlowState
+from ..state import WorkFlowState
 
 
 def send_email(

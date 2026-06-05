@@ -1,4 +1,4 @@
-from daily_report.state import WorkFlowState
+from ..state import WorkFlowState
 
 
 def _format_github_data(github_data: dict) -> str:

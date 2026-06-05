@@ -4,9 +4,9 @@ from datetime import date
 from apscheduler.schedulers.background import BackgroundScheduler
 from loguru import logger
 
-from daily_report.config import AppConfig
-from daily_report.graph import build_graph
-from daily_report.state import create_initial_state
+from .config import AppConfig
+from .graph import build_graph
+from .state import create_initial_state
 
 
 class DailyReportScheduler:

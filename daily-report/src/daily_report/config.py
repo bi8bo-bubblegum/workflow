@@ -95,7 +95,7 @@ def load_config_from_module(path: str | Path) -> AppConfig:
         raise ValueError(f"配置文件 {path} 中未找到 `config` 变量")
 
     cfg = module.config
-    if not isinstance(cfg, AppConfig):
-        raise ValueError(f"配置文件 {path} 中的 `config` 必须是 AppConfig 实例")
+    # if not isinstance(cfg, AppConfig):
+    #     raise ValueError(f"配置文件 {path} 中的 `config` 必须是 AppConfig 实例")
 
     return cfg

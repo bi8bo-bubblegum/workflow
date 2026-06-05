@@ -3,10 +3,20 @@
 敏感信息优先从 .env 文件读取，也支持环境变量。
 支持 `.env` 和 `.env.local` 两个文件，后者优先级更高。
 """
+import sys
+from pathlib import Path
+
+# 将 src 目录添加到 Python 路径
+_project_root = Path(__file__).parent
+_src_path = _project_root / "src"
+if str(_src_path) not in sys.path:
+    sys.path.insert(0, str(_src_path))
 
 from dotenv import dotenv_values, load_dotenv
 
 from daily_report.config import AppConfig, EmailConfig, GitHubConfig, LLMConfig
+
+
 
 load_dotenv()
 env = {**dotenv_values(".env"), **dotenv_values(".env.local")}

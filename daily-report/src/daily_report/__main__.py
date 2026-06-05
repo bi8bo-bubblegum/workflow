@@ -6,10 +6,10 @@ import time
 
 from loguru import logger
 
-from daily_report.config import load_config_from_module
-from daily_report.graph import build_graph
-from daily_report.scheduler import DailyReportScheduler
-from daily_report.state import create_initial_state
+from .config import load_config_from_module
+from .graph import build_graph
+from .scheduler import DailyReportScheduler
+from .state import create_initial_state
 
 
 def _run_once(config_path: str, date: str | None, problems: str, plan: str) -> None:
@@ -73,10 +73,10 @@ def _serve(config_path: str) -> None:
         scheduler.stop()
 
 
-def main() -> None:
+def __main__() -> None:
     """CLI 主入口。"""
     parser = argparse.ArgumentParser(description="LangGraph 驱动的自动化工作日报系统")
-    parser.add_argument("--config", default="../../config.py", help="配置文件路径")
+    parser.add_argument("--config", default="config.py", help="配置文件路径")
     parser.add_argument("--date", default=None, help="日报日期 (YYYY-MM-DD)，默认今天")
     parser.add_argument("--problems", default="", help="遇到的问题")
     parser.add_argument("--plan", default="", help="明日计划")
@@ -91,4 +91,4 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    __main__()
