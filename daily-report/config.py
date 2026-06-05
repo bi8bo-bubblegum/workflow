@@ -3,8 +3,6 @@
 敏感信息优先从 .env 文件读取，也支持环境变量。
 支持 `.env` 和 `.env.local` 两个文件，后者优先级更高。
 """
-import sys
-from pathlib import Path
 
 from dotenv import dotenv_values, load_dotenv
 
