@@ -3,6 +3,16 @@ name = "daily-report"
 version = "0.1.0"
 description = "LangGraph 驱动的自动化开发工作日报系统"
 requires-python = ">=3.11"
+dependencies = [
+    "apscheduler>=3.11.0",
+    "langchain-core>=1.4.0",
+    "langchain-openai>=1.2.0",
+    "langgraph>=1.2.0",
+    "loguru>=0.7.0",
+    "pydantic>=2.13.0",
+    "PyGithub>=2.9.0",
+    "python-dotenv>=1.2.0",
+]
 
 [build-system]
 requires = ["setuptools>=68.0"]
