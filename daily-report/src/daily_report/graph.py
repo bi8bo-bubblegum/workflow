@@ -11,7 +11,7 @@ from daily_report.nodes.send_email import send_email
 from daily_report.state import WorkFlowState
 
 
-def build_graph(config: AppConfig) -> StateGraph:
+def build_graph(config: AppConfig):
     """构建日报工作流图。
 
     Args:
