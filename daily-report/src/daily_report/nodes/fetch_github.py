@@ -26,13 +26,13 @@ def fetch_github(state: WorkFlowState, github_token: str) -> dict:
         for repo_name in repos:
             repo = g.get_repo(repo_name)
             repo_data = {
-                'commit': [],
-                'pull_request': [],
+                'commits': [],
+                'pull_requests': [],
                 'issues': []
             }
             commits = repo.get_commits(since=target_date)
             for commit in commits:
-                repo_data['commit'].append({
+                repo_data['commits'].append({
                     'sha': commit.sha,
                     'message': commit.commit.message,
                     'author': commit.commit.author.name,
@@ -42,7 +42,7 @@ def fetch_github(state: WorkFlowState, github_token: str) -> dict:
             pulls = repo.get_pulls(state='all', sort='create', direction='desc')
             for pr in pulls:
                 if pr.created_at.date() == target_date.date():
-                    repo_data['pull_request'].append({
+                    repo_data['pull_requests'].append({
                         'number': pr.number,
                         'title': pr.title,
                         'state': pr.state,
